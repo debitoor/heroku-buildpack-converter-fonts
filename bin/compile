@@ -18,10 +18,10 @@ echo "-----> Extracting fonts to $TARGET_DIR"
 set -x
 
 mkdir -p "$TARGET_DIR"
-ln -s $TARGET_DIR/verdana.ttf Verdana.ttf
-ln -s $TARGET_DIR/verdanab.ttf Verdana_Bold.ttf
-ln -s $TARGET_DIR/verdanai.ttf Verdana_Italic.ttf
-ln -s $TARGET_DIR/verdanaz.ttf Verdana_Bold_Italic.ttf
+ln -s Verdana.ttf $TARGET_DIR/verdana.ttf
+ln -s Verdana_Bold.ttf $TARGET_DIR/verdanab.ttf
+ln -s Verdana_Italic.ttf $TARGET_DIR/verdanai.ttf
+ln -s Verdana_Bold_Italic.ttf $TARGET_DIR/verdanaz.ttf
 
 set -x
 #cp -v $SOURCE_DIR/* $TARGET_DIR | indent
