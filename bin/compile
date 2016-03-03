@@ -17,6 +17,7 @@ echo "-----> Extracting fonts to $TARGET_DIR"
 #verbose
 set -x
 
+ls -la "$TARGET_DIR"
 mkdir -p "$TARGET_DIR"
 ln -s Verdana.ttf $TARGET_DIR/verdana.ttf
 ln -s Verdana_Bold.ttf $TARGET_DIR/verdanab.ttf
