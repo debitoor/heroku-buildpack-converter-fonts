@@ -15,4 +15,4 @@ TARGET_DIR="$BUILD_DIR/.fonts"
 echo "-----> Extracting fonts to $TARGET_DIR"
 
 mkdir -p "$TARGET_DIR"
-cp $SOURCE_DIR/* $TARGET_DIR | indent
+cp -v $SOURCE_DIR/* $TARGET_DIR | indent
