@@ -15,4 +15,9 @@ TARGET_DIR="$BUILD_DIR/.fonts"
 echo "-----> Extracting fonts to $TARGET_DIR"
 
 mkdir -p "$TARGET_DIR"
-cp -v $SOURCE_DIR/* $TARGET_DIR | indent
+
+ln -s $TARGET_DIR/verdana.ttf Verdana.ttf
+ln -s $TARGET_DIR/verdanab.ttf Verdana_Bold.ttf
+ln -s $TARGET_DIR/verdanai.ttf Verdana_Italic.ttf
+ln -s $TARGET_DIR/verdanaz.ttf Verdana_Bold_Italic.ttf
+#cp -v $SOURCE_DIR/* $TARGET_DIR | indent
