@@ -9,20 +9,14 @@ function indent() {
 }
 
 BUILD_DIR="$1"
-SOURCE_DIR="$(dirname $0)/../fonts"
+SOURCE_DIR="$(dirname $0)/../fonts.tar.gz"
 TARGET_DIR="$BUILD_DIR/.fonts"
 
 echo "-----> Extracting fonts to $TARGET_DIR"
 
-#verbose
 set -x
-
-ls -la "$TARGET_DIR"
 mkdir -p "$TARGET_DIR"
-ln -s Verdana.ttf $TARGET_DIR/verdana.ttf
-ln -s Verdana_Bold.ttf $TARGET_DIR/verdanab.ttf
-ln -s Verdana_Italic.ttf $TARGET_DIR/verdanai.ttf
-ln -s Verdana_Bold_Italic.ttf $TARGET_DIR/verdanaz.ttf
-
-set -x
-#cp -v $SOURCE_DIR/* $TARGET_DIR | indent
+tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
+rm -rf $TARGET_DIR/verdana*
+rm -rf $TARGET_DIR/Verdata*
+set +x
