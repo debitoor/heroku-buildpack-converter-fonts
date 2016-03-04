@@ -17,6 +17,6 @@ echo "-----> Extracting fonts to $TARGET_DIR"
 set -x
 mkdir -p "$TARGET_DIR"
 tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
-rm -rf $TARGET_DIR/verdana*
-rm -rf $TARGET_DIR/Verdana*
+rm -f $TARGET_DIR/verdana.ttf
+rm -f $TARGET_DIR/Verdana.ttf
 set +x
