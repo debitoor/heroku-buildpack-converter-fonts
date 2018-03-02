@@ -10,7 +10,7 @@ function indent() {
 
 BUILD_DIR="$1"
 SOURCE_DIR="$(dirname $0)/../fonts.tar.gz"
-TARGET_DIR="/usr/share/fonts"
+TARGET_DIR="$BUILD_DIR/.fonts"
 
 echo "-----> Extracting fonts to $TARGET_DIR"
 
